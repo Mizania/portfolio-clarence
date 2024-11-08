@@ -49,25 +49,6 @@ header {
     transform: scale(1.1);
 }
 
-nav {
-    display: flex;
-    gap: 4rem;
-}
-
-nav a {
-    font-size: 1.8rem;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover,
-nav a.active {
-    color: #9b59b6;
-    border-bottom: 3px solid #9b59b6;
-}
-
 /* Centered Title for the Gallery */
 .gallery-title {
     text-align: center;
