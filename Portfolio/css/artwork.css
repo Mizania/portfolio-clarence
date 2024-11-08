@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Header and Navigation Styling */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #9b59b6;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 4rem;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #9b59b6;
+    border-bottom: 3px solid #9b59b6;
+}
+
+/* Centered Title for the Gallery */
+.gallery-title {
+    text-align: center;
+    font-size: 4rem;
+    color: #9b59b6;
+    margin-top: 8rem; /* Space for the fixed header */
+    margin-bottom: 3rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 3rem 9%;
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-items: center; /* Centers items within the grid */
+}
+
+.grid-item {
+    background-color: #333;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Masonry Grid Adjustment */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Portfolio Section (for reference if needed) */
+.portfolio {
+    padding: 5rem 9%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: #9b59b6;
+}
+
+.portfolio-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2d2d2d;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: calc(50% - 1.5rem);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: #9b59b6;
+}
+
+.card p {
+    font-size: 1.6rem;
+    margin: 0 1rem 1.5rem;
+    color: #ccc;
+}
+
+/* Add spacing below the "See More" button */
+.card .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    color: #9b59b6;
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #9b59b6;
+    border-radius: 4rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin: 2rem 0;
+}
+
+.card .btn:hover {
+    transform: scale3d(1.03);
+    background-color: #9b59b6;
+    color: black;
+    box-shadow: 0 0 25px #9b59b6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}

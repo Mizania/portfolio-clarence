@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <title>Portfolio | Clarence</title>
+
+</head>
+<header>
+    <a href="../index.html" class="logo">Clarence</a>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <nav id="navMenu">
+        <a href="../index.html"> Home</a>
+        <a href="#" class="active" >Portfolio</a>
+        <a href="skills.html" >Skills</a>
+        <a href="education.html" >Education</a>
+        <a href="experience.html" >Experience</a>
+        <a href="contact.html" >Contact</a>
+    </nav>
+</header>
+<body>
+
+    <section class="portfolio">
+        <h2>My Portfolio</h2>
+        
+        <div class="portfolio-filter">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('development')">Development</button>
+            <button class="filter-btn" onclick="filterProjects('graphics')">Graphics</button>
+        </div>
+    
+        <div class="portfolio-cards">
+            <!-- Development Project 1 -->
+            <a href="projects/yawnink.html" class="card project development">
+                <div class="card-content">
+                    <h3>YawnInk Website</h3>
+                    <p>A CRUD Tattoo Parlour Website with Database Integration and a Pinterest-like gallery using NodeJS and PHPmyAdmin.</p>
+                </div>
+            </a>
+    
+            <!-- Development Project 2 -->
+            <a href="projects/vrgame.html" class="card project development">
+                <div class="card-content">
+                    <h3>VR Escape Room</h3>
+                    <p>A Medieval Themed VR Escape Room with interactive puzzles made in Unity using C#.</p>
+                </div>
+            </a>
+    
+            <!-- Development Project 3 -->
+            <a href="projects/spaceinvaders.html" class="card project development">
+                <div class="card-content">
+                    <h3>Space Invaders Game</h3>
+                    <p>A Space Invaders Game made purely from JavaScript.</p>
+                </div>
+            </a>
+    
+            <!-- Graphics Project 1 -->
+            <a href="designs/artwork.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Artworks</h3>
+                    <p>A Gallery of Artworks that I've done.</p>
+                </div>
+            </a>
+    
+            <!-- Graphics Project 2 -->
+            <a href="designs/pdwebsite.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Portfolio Website Design</h3>
+                    <p>A Portfolio Website Design wireframe made using Adobe Illustrator.</p>
+                </div>
+            </a>
+
+            <a href="designs/namecard.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Namecard Designs</h3>
+                    <p>Various Namecard Designs made from Adobe Illustrator and Canva.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+
+    <script src="../js/portfolio.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
