@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <title>YawnInk Website | Clarence</title>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Clarence</a>
+    
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    
+        <nav id="navMenu">
+            <a href="../../index.html"> Home</a>
+            <a href="../portfolio.html" class="active">Portfolio</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../education.html">Education</a>
+            <a href="../experience.html">Experience</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div id="sidebarToggle" onclick="toggleSidebar()">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li data-target="overview">
+                <span class="circle">1</span> Overview
+            </li>
+            <li data-target="development">
+                <span class="circle">2</span> Development
+            </li>
+            <li data-target="features">
+                <span class="circle">3</span> Features
+            </li>
+            <li data-target="enhancements">
+                <span class="circle">4</span> Enhancements
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <div class="development-process">
+            <section id="overview">
+                <h2>Overview</h2>
+                <br>
+                <p class="section-description">This is a placeholder for the overview of the project. Here you can describe the goals, objectives, and general information about the project.</p>
+                <br>
+                <div class="video-container">
+                    <video width="100%" height="500" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card">
+                    <h3>Project Vision</h3>
+                    <img src="../../public/img/vr-overview.jpg" alt="Project Vision" class="card-image">
+                    <p>This card can be used to give a more detailed explanation about the project concept, its core features, and potential outcomes.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, atque! Voluptates, aliquid consectetur! Officia fuga dolores corporis ratione enim. Adipisci repellat expedita optio cumque, suscipit doloremque amet accusamus nihil omnis!</p>
+                </div>
+            </section>
+
+            <section id="development">
+                <h2>Development</h2>
+                <p class="section-description">This section discusses the coding, architecture, and technical aspects of building the VR escape room. Here is a space to embed your code.</p>
+            
+                <!-- Card for Pinterest Gallery -->
+                <div class="card">
+                    <h3>Pinterest-Like Gallery</h3>
+                    <div class="code-embed">
+                        <p>This area can be used to showcase important code snippets or frameworks used in the project.</p>
+                    </div>
+                </div>
+    
+            </section>
+            
+
+            <section id="features">
+                <h2>Features</h2>
+                <p class="section-description">This section highlights key features of the VR Escape Room. It may include interactive elements, puzzles, or special effects.</p>
+                <div class="card">
+                    <h3>JavaScriptF Functions</h3>
+                    <img src="../../public/img/vr-puzzle.jpg" alt="Puzzle Feature" class="card-image">
+                    <p>In this card, describe the JavaScript Functions.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus error quia modi laboriosam explicabo ad consectetur magni maiores ratione nulla aliquid illum exercitationem dolorem aspernatur, esse amet provident, aut repudiandae.</p>
+                </div>
+            </section>
+
+            <section id="enhancements">
+                <h2>Enhancements</h2>
+                <p class="section-description">This section covers any future improvements, enhancements, or additional features you plan to implement in the project.</p>
+                <div class="card">
+                    <h3>Future Enhancements</h3>
+                    <img src="../../public/img/vr-enhancements.jpg" alt="Enhancements" class="card-image">
+                    <p>Discuss possible future enhancements such as adding new levels, improving graphics, or adding multiplayer functionality.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis distinctio delectus consectetur sint cupiditate asperiores eaque dolorem provident! Iusto dolor, sed culpa excepturi iste consequuntur alias. Asperiores modi reprehenderit laboriosam.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                    } else {
+                        entry.target.classList.remove("in-view");
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

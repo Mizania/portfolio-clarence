@@ -1,0 +1,239 @@
+/* Sidebar default styles */
+#sidebar {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 250px;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+/* Hide sidebar on smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        transform: translateX(-100%);
+    }
+
+    #sidebarToggle {
+        display: block;
+    }
+}
+
+/* Sidebar Toggle Button (initially hidden) */
+#sidebarToggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    background-color: #9b59b6;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: transform 0.3s;
+}
+
+/* Toggle icon rotation when sidebar is open */
+#sidebar.open + #sidebarToggle i {
+    transform: rotate(180deg);
+}
+
+/* Sidebar visible when open */
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+#sidebar li:hover,
+#sidebar li.active {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+#sidebar .circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #9b59b6;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* Active Circle Styling */
+#sidebar li.active .circle {
+    background-color: #5c2c6d;
+}
+
+/* Content area styling for the main content */
+#content {
+    margin-left: 270px;
+    padding: 2rem;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Development Process Layout */
+.development-process {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Styling */
+section {
+    background-color: #161616;
+    color: white;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+    scroll-margin-top: 6rem;
+}
+
+/* Ensure section headers are purple and text is white */
+section h2 {
+    font-size: 2.5rem;
+    color: #9b59b6;
+}
+
+section p {
+    color: white;
+}
+
+/* Fade-in Animation */
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make sure nav bar content is consistent */
+nav a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #9b59b6;
+    border-bottom: 3px solid #9b59b6;
+}
+
+/* Ensure proper layout of the nav and sidebar on smaller screens */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+        top: 10%;
+    }
+    #content {
+        margin-left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* Styling to ensure video fits well within the section */
+.video-container, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#content {
+    margin-top: 6rem;
+}
+
+/* Full-width card in section */
+.card {
+    background-color: #2d2d2d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    width: 100%; /* Ensure the card spans the full width of the section */
+    height: 200px; /* Default height */
+}
+
+.card:hover {
+    height: 300px; /* Expanded height */
+    background-color: #5c2c6d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #9b59b6;
+    font-size: 1.6rem;
+}
+
+.card p {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+}
+
+.card:hover p {
+    opacity: 1;
+}
+
+/* Image and Media Styling */
+.card img,
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures images cover the section without stretching */
+    margin-bottom: 15px; /* Adds space below the image */
+}
+
+/* For smaller screens: ensures proper image scaling */
+@media screen and (max-width: 768px) {
+    .card img,
+    section img {
+        object-fit: contain; /* Ensures images are fully contained */
+    }
+}

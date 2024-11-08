@@ -1,0 +1,97 @@
+/* Basic Layout and Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #161616;
+}
+
+#contact {
+    padding: 4rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #9b59b6;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+/* Form Styling */
+form#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+form label {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #9b59b6;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #444;
+    resize: none;
+    transition: border 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #9b59b6;
+}
+
+/* Button Styling */
+form button {
+    padding: 1rem;
+    background-color: #9b59b6;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #5c2c6d;
+    transform: scale(1.05);
+}
+
+/* Status Message */
+#statusMessage {
+    font-size: 1.2rem;
+    color: #9b59b6;
+    margin-top: 1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+    
+    form button {
+        font-size: 1.2rem;
+    }
+}
