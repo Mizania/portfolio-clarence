@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <title>YawnInk Website | Clarence</title>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Clarence</a>
+    
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    
+        <nav id="navMenu">
+            <a href="../../index.html"> Home</a>
+            <a href="../portfolio.html" class="active">Portfolio</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../education.html">Education</a>
+            <a href="../experience.html">Experience</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div id="sidebarToggle" onclick="toggleSidebar()">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li data-target="overview">
+                <span class="circle">1</span> Overview
+            </li>
+            <li data-target="moodboard">
+                <span class="circle">2</span> Moodboard
+            </li>
+            <li data-target="design">
+                <span class="circle">3</span> Design
+            </li>
+            <li data-target="rationale">
+                <span class="circle">4</span> Design Rationale
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="content">
+        <div class="design-process">
+            <!-- Overview Section -->
+            <section id="overview">
+                <h2>Overview</h2>
+                <br>
+                <p class="section-description">This is a placeholder for the overview of the project. Here you can describe the goals, objectives, and general information about the design project.</p>
+                <br>
+                <div class="video-container">
+                    <video width="500" height="100" controls>
+                        <source src="../../public/vid/finflow.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card">
+                    <h3>Design Vision</h3>
+                    <p>This card can be used to give a more detailed explanation about the project concept, its core features, and potential outcomes.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, atque! Voluptates, aliquid consectetur! Officia fuga dolores corporis ratione enim. Adipisci repellat expedita optio cumque, suscipit doloremque amet accusamus nihil omnis!</p>
+                </div>
+            </section>
+
+            <!-- Moodboard Section -->
+            <section id="moodboard">
+                <h2>Moodboard</h2>
+                <p class="section-description">This section presents the moodboard for the design project, which includes inspiration and visual references that influenced the design direction.</p>
+                <div class="card">
+                    <h3>Visual Inspiration</h3>
+                    <img src="../../public/img/design-moodboard.jpg" alt="Moodboard" class="card-image">
+                    <p>In this card, explain how the images and references contributed to shaping the design aesthetic.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus inventore quo vel neque assumenda voluptatum eveniet iure molestias? Quaerat, vero dolores tempore rem repudiandae consectetur temporibus maiores hic suscipit.</p>
+                </div>
+            </section>
+
+            <!-- Design Section -->
+            <section id="design">
+                <h2>Design</h2>
+                <p class="section-description">This section discusses the design process, including mockups, wireframes, and the visual elements of the project.</p>
+                <div class="card">
+                    <h3>Namecard Designs</h3>
+                    <img src="../../public/img/design-wireframe.jpg" alt="Wireframe" class="card-image">
+                    <p>In this card, describe the wireframe design of the project, explaining how the interface was structured.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus inventore quo vel neque assumenda voluptatum eveniet iure molestias? Quaerat, vero dolores tempore rem repudiandae consectetur temporibus maiores hic suscipit.</p>
+                </div>
+            </section>
+
+            <!-- Design Rationale Section -->
+            <section id="rationale">
+                <h2>Design Rationale</h2>
+                <p class="section-description">This section explains the design decisions made, the rationale behind those choices, and how they align with the project's goals.</p>
+                <div class="card">
+                    <h3>Why This Design?</h3>
+                    <img src="../../public/img/design-rationale.jpg" alt="Design Rationale" class="card-image">
+                    <p>In this card, describe the reasons for the design decisions such as color scheme, typography, layout, and any other choices that were made for the project.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis distinctio delectus consectetur sint cupiditate asperiores eaque dolorem provident! Iusto dolor, sed culpa excepturi iste consequuntur alias. Asperiores modi reprehenderit laboriosam.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                    } else {
+                        entry.target.classList.remove("in-view");
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
