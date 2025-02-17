@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/portfolio.css">
     <title>Portfolio | Clarence</title>
-
 </head>
 <header>
     <a href="../index.html" class="logo">Clarence</a>
@@ -18,88 +18,120 @@
 
     <nav id="navMenu">
         <a href="../index.html"> Home</a>
-        <a href="#" class="active" >Portfolio</a>
-        <a href="education.html" >Education</a>
-        <a href="contact.html" >Contact</a>
+        <a href="#" class="active">Portfolio</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
+
 <body>
 
     <section class="portfolio">
         <h2>My Portfolio</h2>
-        
+
         <div class="portfolio-filter">
             <button class="filter-btn active" onclick="filterProjects('all')">All</button>
             <button class="filter-btn" onclick="filterProjects('development')">Development</button>
             <button class="filter-btn" onclick="filterProjects('graphics')">Graphics</button>
         </div>
-    
+
         <div class="portfolio-cards">
-            <!-- Development Project 1 -->
-            <a href="projects/yawnink.html" class="card project development">
-                <div class="card-content">
-                    <h3>YawnInk Website</h3>
-                    <p>A CRUD Tattoo Parlour Website with Database Integration and a Pinterest-like gallery using NodeJS and PHPmyAdmin.</p>
-                </div>
-            </a>
-    
-            <!-- Development Project 2 -->
-            <a href="projects/vrgame.html" class="card project development">
-                <div class="card-content">
-                    <h3>VR Escape Room</h3>
-                    <p>A Medieval Themed VR Escape Room with interactive puzzles made in Unity using C#.</p>
-                </div>
-            </a>
-    
-            <!-- Development Project 3 -->
-            <a href="projects/spaceinvaders.html" class="card project development">
-                <div class="card-content">
-                    <h3>Space Invaders Game</h3>
-                    <p>A Space Invaders Game made purely from JavaScript.</p>
-                </div>
-            </a>
-    
-            <!-- Graphics Project 1 -->
-            <a href="designs/artwork.html" class="card project graphics">
-                <div class="card-content">
-                    <h3>Artworks</h3>
-                    <p>A Gallery of Artworks that I've done.</p>
-                </div>
-            </a>
-    
-            <!-- Graphics Project 2 -->
-            <a href="designs/pdwebsite.html" class="card project graphics">
-                <div class="card-content">
-                    <h3>Digital Creations</h3>
-                    <p>A Collection of my Graphic Design and Digital Creations</p>
-                </div>
-            </a>
-
-            <a href="designs/namecard.html" class="card project graphics">
-                <div class="card-content">
-                    <h3>Namecard Designs</h3>
-                    <p>Various Namecard Designs made from Adobe Illustrator and Canva.</p>
-                </div>
-            </a>
-
-            <a href="designs/finflow.html" class="card project graphics">
-                <div class="card-content">
-                    <h3>Finance App Design</h3>
-                    <p>A UI/UX Design of a Finance Management App made using Figma.</p>
-                </div>
-            </a>
-
+            <!-- Graphics Project 1: StyleShop -->
             <a href="designs/styleshop.html" class="card project graphics">
                 <div class="card-content">
                     <h3>StyleShop</h3>
-                    <p>A UI/UX Design of an E-Commerce shop made using Figma.</p>
+                    <p>A modern UI/UX design for an e-commerce platform, focusing on user-friendly navigation and an
+                        aesthetically pleasing shopping experience. Created using Figma.</p>
                 </div>
             </a>
+
+            <!-- Development Project 1: Space Invaders -->
+            <a href="projects/spaceinvaders.html" class="card project development">
+                <div class="card-content">
+                    <h3>Space Invaders Game</h3>
+                    <p>A classic Space Invaders game built with JavaScript, featuring increasing difficulty, animated
+                        graphics, and score tracking.</p>
+                </div>
+            </a>
+
+            <!-- Development Project 2: Rock Paper Scissors -->
+            <a href="projects/rockpapperscissors.html" class="card project development">
+                <div class="card-content">
+                    <h3>Rock Paper Scissors Game</h3>
+                    <p>An interactive game built using HTML, CSS, and JavaScript, with dynamic score tracking and smooth
+                        animations for an engaging experience.</p>
+                </div>
+            </a>
+
+            <!-- Development Project 3: YawnInk Website -->
+            <a href="projects/yawnink.html" class="card project development">
+                <div class="card-content">
+                    <h3>YawnInk Website</h3>
+                    <p>A tattoo parlour website with CRUD functionality and a Pinterest-like gallery, built using NodeJS
+                        and PHPmyAdmin for database management.</p>
+                </div>
+            </a>
+
+            <!-- Development Project 4: VR Escape Room -->
+            <a href="projects/vrgame.html" class="card project development">
+                <div class="card-content">
+                    <h3>VR Escape Room</h3>
+                    <p>A medieval-themed VR escape room game, featuring interactive puzzles and immersive environments,
+                        developed using Unity and C#.</p>
+                </div>
+            </a>
+
+            <!-- Development Project 5: Whack-A-Mole Game -->
+            <a href="projects/whackamole.html" class="card project development">
+                <div class="card-content">
+                    <h3>Whack-A-Mole Game</h3>
+                    <p>A fast-paced, fun game where players “whack” moles to score points, created with HTML, CSS, and
+                        JavaScript, featuring random mole generation.</p>
+                </div>
+            </a>
+
+            <!-- Graphics Project 2: Artworks -->
+            <a href="designs/artwork.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Artworks</h3>
+                    <p>A showcase of my digital and traditional artwork, reflecting my creative journey and diverse art
+                        styles.</p>
+                </div>
+            </a>
+
+            <!-- Graphics Project 3: Digital Creations -->
+            <a href="designs/pdwebsite.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Digital Creations</h3>
+                    <p>A collection of digital designs, including illustrations and branding, created using Adobe
+                        Illustrator, Photoshop, and Canva.</p>
+                </div>
+            </a>
+
+            <!-- Graphics Project 4: Namecard Designs -->
+            <a href="designs/namecard.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Namecard Designs</h3>
+                    <p>A variety of creative namecard designs using Adobe Illustrator and Canva, reflecting brand
+                        identity and professionalism.</p>
+                </div>
+            </a>
+
+            <!-- Graphics Project 5: Finance App Design -->
+            <a href="designs/finflow.html" class="card project graphics">
+                <div class="card-content">
+                    <h3>Finance App Design</h3>
+                    <p>A clean and user-friendly UI/UX design for a finance management app, focusing on budgeting and
+                        expense tracking, created with Figma.</p>
+                </div>
+            </a>
+
         </div>
     </section>
-    
+
 
     <script src="../js/portfolio.js"></script>
     <script src="../js/script.js"></script>
 </body>
+
 </html>

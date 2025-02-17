@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <title>Whack-A-Mole | Clarence</title>
+</head>
+
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Clarence</a>
+    
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+    
+        <nav id="navMenu">
+            <a href="../../index.html"> Home</a>
+            <a href="../portfolio.html" class="active">Portfolio</a>
+            <a href="../education.html">Education</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="content">
+        <section id="overview">
+            <h2>Whack-A-Mole Game</h2>
+
+            <!-- Embed Video (Game Demonstration) -->
+            <div class="video-container">
+                <iframe width="950" height="500" src="https://www.youtube.com/embed/GxnkE-hAvaw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Project Summary (Game description) -->
+            <div class="card">
+                <h3>Game Description</h3>
+                <p>This is a fun and interactive Whack-A-Mole game, developed using HTML, CSS, and JavaScript. In this game, you’ll try to hit as many moles as possible before the timer runs out. The game has a score counter, a timer, and randomly popping moles to keep the game exciting!</p>
+            </div>
+
+            <!-- Figma Design Image (Whack-A-Mole Game Layout) -->
+            <div class="card">
+                <h3>Screenshots</h3>
+                <div class="image-container">
+                    <img src="../../public/img/whack-a-mole/main.jpg" alt="Whack-A-Mole Game Screen" class="card-image">
+                </div>
+                <p>This is the game screen for the Whack-A-Mole game.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="../../js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                    } else {
+                        entry.target.classList.remove("in-view");
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
